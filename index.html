@@ -1,44 +1,75 @@
-<!DOCTYPE html>
 <html>
-  <head>
-     <title>Sáng tạo trẻ NTT</title>
-     <meta charset='utf-8'>
+<head>
+     <title>Dashboard - Sáng tạo trẻ NTT</title>
+     <meta charset="utf-8">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+     <link rel="stylesheet" href="../css/font.css">
      <style>
        body {
+        font-family: Nunito;
         background: black;
-        margin: 0;
+       }
+       strong {
+        font-weight: bold;
        }
      </style>
   </head>
   <body>
    <button class="btn-floating btn-large waves-effect waves-light" style="background: transparent;"><i class="material-icons">menu</i></button>
-   <div class="container">
-   		<div class="row">
+   <div class="container-fluid">
+      <div class="row">
         <!-- mo hinh -->
-        <div class="col-md-6">
-          <canvas id='canvas'></canvas>
+        <div class="col s6 m6">
+          
         </div>
+        <!-- end mo hinh -->
         <!-- stats -->
-        <div class="col-md-6">
+        <div class="col s6 m6">
           <div class="card">
             <div class="card-body">
               <div class="row">
-                <div class="col-md-6">
-                  <p style="font-size: 15px;">Mức thủy triều</p>
-                  <p style="font-size: 25px;"><strong>0 m</strong></p>
+                <div class="col s6 m6" style="line-height: 5px;padding-left: 20px;">
+                  <p style="font-size: 25px;">Mức thủy triều</p>
+                  <p style="font-size: 35px;"><strong>0 m</strong></p>
                 </div>
-                <div class="col-md-6">
-                  <i style="font-size: 25px;">menu</i>
+                <div class="col s6 m6" align="right">
+                  <i style="font-size: 100px;" class="material-icons">beach_access</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col s6 m6" style="line-height: 5px;padding-left: 20px;">
+                  <p style="font-size: 25px;">Cảnh báo</p>
+                  <p style="font-size: 35px;"><strong>0</strong></p>
+                </div>
+                <div class="col s6 m6" align="right">
+                  <i style="font-size: 100px;" class="material-icons">warning</i>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col s6 m6" style="line-height: 5px;padding-left: 20px;">
+                  <p style="font-size: 25px;">Điện tạo ra</p>
+                  <p style="font-size: 35px;"><strong>0 kwH</strong></p>
+                </div>
+                <div class="col s6 m6" align="right">
+                  <i style="font-size: 100px;" class="material-icons">battery_charging_full</i>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <!-- end stats -->
       </div>
    </div>
-  </body>
+  
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src='js/main.js' defer></script>
 </html>
