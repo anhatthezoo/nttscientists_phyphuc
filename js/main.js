@@ -38,7 +38,8 @@ dirLight.shadow.camera.far = 25;
 scene.add(dirLight);
 ///////////
 
-var loader = new THREE.OBJLoader();
+const meshLoader = new THREE.OBJLoader(),
+      mtlLoader = new THREE.MTLLoader();
 
 const testPlaneGeo = new THREE.BoxGeometry(5, 5),
       testMat = new THREE.MeshPhongMaterial( { color: 0xfffffff, side: THREE.DoubleSide} ),
@@ -47,6 +48,14 @@ const testPlaneGeo = new THREE.BoxGeometry(5, 5),
 scene.add(testPlane);
 camera.position.z = 5;
 camera.position.x = 2;
+
+mtlLoader.load('assets/meshes/terrain.mtl', function(materials) {
+    materials.preload();
+    meshLoader.setMaterials(materials);
+    meshLoader.load('assets/meshes/terrain.obj', function(mesh) {
+        scene.add(mesh);
+    })
+});
 
 function animateScene() {
     requestAnimationFrame(animateScene );
