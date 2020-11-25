@@ -8,7 +8,7 @@
      <style>
        body {
         font-family: Nunito;
-        background: black;
+        background: white;
        }
        strong {
         font-weight: bold;
@@ -17,6 +17,10 @@
         border-radius:100px;
         font-family: Nunito;
        }
+
+       #canvas-div {
+         position: relative;
+       }
      </style>
   </head>
   <body>
@@ -24,7 +28,7 @@
    <div class="container-fluid">
       <div class="row">
         <!-- mo hinh -->
-        <div class="col s8 m8">
+        <div class="col s8 m8" id='canvas-div'>
             <canvas id='canvas' width='800' height='600'></canvas>
         </div>
         <!-- end mo hinh -->
@@ -58,10 +62,10 @@
                </div>
              </div>
              <div align="center">
-               <p style="color:#FFF;font-size:20px;"><b>ĐIỀU CHỈNH MỰC NƯỚC</b></p>
+               <p style="color:black;font-size:20px;"><b>ĐIỀU CHỈNH MỰC NƯỚC</b></p>
                <button class="btn waves-effect waves-light">TĂNG</button>
                <button class="btn waves-effect waves-light">GIẢM</button>
-               <p style="color:#FFF;font-size:20px;"><b>ĐIỀU CHỈNH CAMERA</b></p>
+               <p style="color:black;font-size:20px;"><b>ĐIỀU CHỈNH CAMERA</b></p>
                <button class="btn waves-effect waves-light">BÊN NGOÀI</button>
                <button class="btn waves-effect waves-light">TRONG NHÀ MÁY</button>
              </div>
@@ -74,6 +78,8 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <script src='js/three.js' defer></script>
   <script src='js/TrackballControls.js' defer></script>
+  <script src='js/OBJLoader.js' defer></script>
+  <script src='js/MTLLoader.js' defer></script>
   <script src='js/main.js' defer></script>
 </html>
 
